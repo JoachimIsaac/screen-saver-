@@ -2,9 +2,6 @@
 //
 //   Name:Joachim Isaac
 //
-//   Course: CMPS-1044-102, Fall 18, Dr.Tina Johnson
-//
-//   Purpose:
 //
 //
 //
