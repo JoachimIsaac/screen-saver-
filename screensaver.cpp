@@ -2,7 +2,6 @@
 //
 //   Name:Joachim Isaac
 //
-//
 //   Purpose:
 //
 //
@@ -81,8 +80,15 @@ SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYN
     //SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32) is the amount of
     //pixel memory needed for the entire screen.
     //255 = 0xff in hexadecimal.
-    memset(buffer,0xFF,SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32));
+    //255 is a color it is the limit of the range of colors
+    memset(buffer,0,SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32));
     
+    //each pair of ffs set a value for each red blue or green.
+    buffer[30000] = 0xFFFFFFFF;
+    //This loop sets all the colors of each particle based on the hexadecimal number
+    for(int i = 0; i < SCREEN_WIDTH * SCREEN_HEIGHT;i++){
+        buffer[i] = 0x080080FF;
+    }
     
     //updates the texture
     SDL_UpdateTexture(texture, NULL, buffer, SCREEN_WIDTH * sizeof(Uint32));
