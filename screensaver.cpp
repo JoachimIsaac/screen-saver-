@@ -2,6 +2,9 @@
 //
 //   Name:Joachim Isaac
 //
+//   Course: CMPS-1044-102, Fall 18, Dr.Tina Johnson
+//
+//   Purpose:
 //
 //
 //
@@ -74,6 +77,21 @@ SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYN
     //sdl's version of an in has 32bits.
     //This has the memory aviable to hold the colors.
     Uint32 * buffer = new Uint32[SCREEN_WIDTH * SCREEN_HEIGHT];
+    
+    //memset allows you to set a block of memory with a particular value
+    //SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32) is the amount of
+    //pixel memory needed for the entire screen.
+    //255 = 0xff in hexadecimal.
+    memset(buffer,0xFF,SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32));
+    
+    
+    //updates the texture
+    SDL_UpdateTexture(texture, NULL, buffer, SCREEN_WIDTH * sizeof(Uint32));
+    
+    SDL_RenderClear(renderer);
+    SDL_RenderCopy(renderer, texture, NULL, NULL);
+    SDL_RenderPresent(renderer);
+    
     
     bool quit = false;
     SDL_Event event;
