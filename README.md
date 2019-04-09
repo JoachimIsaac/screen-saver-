@@ -2,6 +2,8 @@
 
 Project name:screen saver of colored particles (in C++)
 
+The files in the folder are in oop format. 
+The file that is not in the folder is in procedural format. 
 
 Description: This program projects particles on the screen that bounce around. Presently the program isn't finished.(It displays a screen filled with only one color.)
 
@@ -9,3 +11,4 @@ Installation:Download the .cpp file and run it on a compiler that runs c++. This
 This program also had the SDL  libary and you would need this libary to be able to run it. 
 
 Usage:When the program runs it should ask you to input numbers. After every number press enter then enter the next number until you hit the maximum numbers that can be entered(5). After the last one is entered the random numbers that it will compare it to will be displayed and also a message saying how many matches you got.
+
