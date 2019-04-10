@@ -36,7 +36,9 @@ int main(){
         //Draws particles
         //Checks for messages and events
         if(screen.processEvents() == false){
-            break;
+            //break;
+            //This is where i'm stuck, when I put the break here it makes the program instantly close after running.
+            //It seems to be a problem with my logic. Looking into it. 
             
         }
     }
